@@ -20,20 +20,23 @@ import {
     invokeAsync,
     BaseAuthRequest,
     StringDict,
-} from "@azure/msal-common";
-import { BaseInteractionClient } from "./BaseInteractionClient";
-import { AuthorizationUrlRequest } from "../request/AuthorizationUrlRequest";
-import { BrowserConstants, InteractionType } from "../utils/BrowserConstants";
-import { version } from "../packageMetadata";
-import { BrowserStateObject } from "../utils/BrowserProtocolUtils";
-import { EndSessionRequest } from "../request/EndSessionRequest";
-import * as BrowserUtils from "../utils/BrowserUtils";
-import { RedirectRequest } from "../request/RedirectRequest";
-import { PopupRequest } from "../request/PopupRequest";
-import { SsoSilentRequest } from "../request/SsoSilentRequest";
-import { generatePkceCodes } from "../crypto/PkceGenerator";
-import { createNewGuid } from "../crypto/BrowserCrypto";
-import { initializeBaseRequest } from "../request/RequestHelpers";
+} from "@azure/msal-common/browser";
+import { BaseInteractionClient } from "./BaseInteractionClient.js";
+import { AuthorizationUrlRequest } from "../request/AuthorizationUrlRequest.js";
+import {
+    BrowserConstants,
+    InteractionType,
+} from "../utils/BrowserConstants.js";
+import { version } from "../packageMetadata.js";
+import { BrowserStateObject } from "../utils/BrowserProtocolUtils.js";
+import { EndSessionRequest } from "../request/EndSessionRequest.js";
+import * as BrowserUtils from "../utils/BrowserUtils.js";
+import { RedirectRequest } from "../request/RedirectRequest.js";
+import { PopupRequest } from "../request/PopupRequest.js";
+import { SsoSilentRequest } from "../request/SsoSilentRequest.js";
+import { generatePkceCodes } from "../crypto/PkceGenerator.js";
+import { createNewGuid } from "../crypto/BrowserCrypto.js";
+import { initializeBaseRequest } from "../request/RequestHelpers.js";
 
 /**
  * Defines the class structure and helper functions used by the "standard", non-brokered auth flows (popup, redirect, silent (RT), silent (iframe))
@@ -282,6 +285,7 @@ export abstract class StandardInteractionClient extends BaseInteractionClient {
                 clientId: this.config.auth.clientId,
                 authority: discoveredAuthority,
                 clientCapabilities: this.config.auth.clientCapabilities,
+                redirectUri: this.config.auth.redirectUri,
             },
             systemOptions: {
                 tokenRenewalOffsetSeconds:
@@ -357,6 +361,11 @@ export abstract class StandardInteractionClient extends BaseInteractionClient {
             responseMode: this.config.auth.OIDCOptions
                 .serverResponseType as ResponseMode,
         };
+
+        // Skip active account lookup if either login hint or session id is set
+        if (request.loginHint || request.sid) {
+            return validatedRequest;
+        }
 
         const account =
             request.account || this.browserStorage.getActiveAccount();
