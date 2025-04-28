@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1745617706148,
+  "lastUpdate": 1745876918092,
   "repoUrl": "https://github.com/fondoger/microsoft-authentication-library-for-js",
   "entries": {
     "msal-node client-credential Regression Test": [
@@ -152,6 +152,44 @@ window.BENCHMARK_DATA = {
             "range": "±0.71%",
             "unit": "ops/sec",
             "extra": "223 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "thomas.norling@microsoft.com",
+            "name": "Thomas Norling",
+            "username": "tnorling"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "872c7059390d02ddc61510ebfaa54839657e14d4",
+          "message": "Fix react initialization race (#7720)\n\nFixes a race condition that can occur between cache initialization and\nreact state initialization\n\nFixes #7654, #7561\n\n---------\n\nCo-authored-by: Jo Arroyo <joarroyo@microsoft.com>",
+          "timestamp": "2025-04-28T13:34:41-07:00",
+          "tree_id": "d2752f061a77f017d35adb8709c5570514b5d01f",
+          "url": "https://github.com/fondoger/microsoft-authentication-library-for-js/commit/872c7059390d02ddc61510ebfaa54839657e14d4"
+        },
+        "date": 1745876916431,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsFirstItemInTheCache",
+            "value": 252385,
+            "range": "±0.84%",
+            "unit": "ops/sec",
+            "extra": "234 samples"
+          },
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsLastItemInTheCache",
+            "value": 252309,
+            "range": "±0.77%",
+            "unit": "ops/sec",
+            "extra": "234 samples"
           }
         ]
       }
