@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1748641691579,
+  "lastUpdate": 1748663292751,
   "repoUrl": "https://github.com/fondoger/microsoft-authentication-library-for-js",
   "entries": {
     "msal-node client-credential Regression Test": [
@@ -418,6 +418,44 @@ window.BENCHMARK_DATA = {
             "range": "±0.94%",
             "unit": "ops/sec",
             "extra": "211 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "87724641+Robbie-Microsoft@users.noreply.github.com",
+            "name": "Robbie-Microsoft",
+            "username": "Robbie-Microsoft"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "8323e24e3b5b09124bfb83c0e4bbec013a2b7a0c",
+          "message": "Improvements to client-credentials-with-cert-from-key-vault sample (#7792)\n\n- Moved user input to .env file and updated README\n- Improved cliArgs.ts",
+          "timestamp": "2025-05-30T18:25:01-04:00",
+          "tree_id": "8ae62a3e0e977f5eff19baea26bc87642b74a8fc",
+          "url": "https://github.com/fondoger/microsoft-authentication-library-for-js/commit/8323e24e3b5b09124bfb83c0e4bbec013a2b7a0c"
+        },
+        "date": 1748663291270,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsFirstItemInTheCache",
+            "value": 246440,
+            "range": "±0.94%",
+            "unit": "ops/sec",
+            "extra": "210 samples"
+          },
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsLastItemInTheCache",
+            "value": 247134,
+            "range": "±0.87%",
+            "unit": "ops/sec",
+            "extra": "232 samples"
           }
         ]
       }
