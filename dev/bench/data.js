@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1755056908335,
+  "lastUpdate": 1755229699660,
   "repoUrl": "https://github.com/fondoger/microsoft-authentication-library-for-js",
   "entries": {
     "msal-node client-credential Regression Test": [
@@ -950,6 +950,44 @@ window.BENCHMARK_DATA = {
             "range": "±0.75%",
             "unit": "ops/sec",
             "extra": "222 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "thomas.norling@microsoft.com",
+            "name": "Thomas Norling",
+            "username": "tnorling"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f054cf608d2544858d8a3dbd02efd8b464ca862a",
+          "message": "Update CODEOWNERS with MSAL.js Team (#7996)\n\nThis pull request updates the `CODEOWNERS` file to consolidate and\nsimplify code ownership assignments. The main change is replacing\nindividual maintainer usernames with the\n`@AzureAD/msal-js-public-client` team for most areas, and updating\nnode-related paths to include both `@AzureAD/msal-js-public-client` and\n`@AzureAD/id4s-msal-team`. This streamlines code review responsibilities\nand reflects current team structures.\n\nOwnership assignment updates:\n\n* Replaced individual user assignments with the\n`@AzureAD/msal-js-public-client` team for general ownership and for\nseveral library and sample directories.\n* Updated ownership for `/lib/msal-node/` and\n`/samples/msal-node-samples/` to include both\n`@AzureAD/msal-js-public-client` and `@AzureAD/id4s-msal-team`, ensuring\nboth teams are responsible for these areas.\n\nCleanup and simplification:\n\n* Removed redundant or outdated individual user assignments from various\ndirectories, consolidating ownership under relevant teams.",
+          "timestamp": "2025-08-14T17:16:03-07:00",
+          "tree_id": "9a577f671644785be69598636274eeccb4131df8",
+          "url": "https://github.com/fondoger/microsoft-authentication-library-for-js/commit/f054cf608d2544858d8a3dbd02efd8b464ca862a"
+        },
+        "date": 1755229698099,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsFirstItemInTheCache",
+            "value": 248298,
+            "range": "±0.82%",
+            "unit": "ops/sec",
+            "extra": "224 samples"
+          },
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsLastItemInTheCache",
+            "value": 244819,
+            "range": "±0.78%",
+            "unit": "ops/sec",
+            "extra": "236 samples"
           }
         ]
       }
