@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1755316115501,
+  "lastUpdate": 1755575311362,
   "repoUrl": "https://github.com/fondoger/microsoft-authentication-library-for-js",
   "entries": {
     "msal-node client-credential Regression Test": [
@@ -1102,6 +1102,44 @@ window.BENCHMARK_DATA = {
             "range": "±0.74%",
             "unit": "ops/sec",
             "extra": "234 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sameera.gajjarapu@microsoft.com",
+            "name": "Sameera Gajjarapu",
+            "username": "sameerag"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "866f2da124aa13700cfe9d14d5a78ddda9d2bf53",
+          "message": "Add JS platform telemetry params (#7991)\n\n- `isPlatformAuthorizeRequest:boolean` Is set on every request that is\nsent to STS with nativeBroker=1\n- `isPlatformBrokerRequest:boolean` Is set on every request that is sent\nto the platform broker directly, and always set only if\n`nativeAccountId` is in the cache/request\n- `isNativeBroker:boolean` Is set on every successful response from the\nBroker\n- `BrokerErrorName` for intermittent fatal broker errors\n\n---------\n\nCo-authored-by: Copilot <175728472+Copilot@users.noreply.github.com>",
+          "timestamp": "2025-08-18T14:50:34-07:00",
+          "tree_id": "ebfd699a9928d97e95ef27dd84025c86e0d5d919",
+          "url": "https://github.com/fondoger/microsoft-authentication-library-for-js/commit/866f2da124aa13700cfe9d14d5a78ddda9d2bf53"
+        },
+        "date": 1755575309635,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsFirstItemInTheCache",
+            "value": 260005,
+            "range": "±0.66%",
+            "unit": "ops/sec",
+            "extra": "238 samples"
+          },
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsLastItemInTheCache",
+            "value": 252340,
+            "range": "±0.67%",
+            "unit": "ops/sec",
+            "extra": "212 samples"
           }
         ]
       }
