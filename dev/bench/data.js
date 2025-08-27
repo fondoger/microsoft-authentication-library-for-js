@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1756180087675,
+  "lastUpdate": 1756331299108,
   "repoUrl": "https://github.com/fondoger/microsoft-authentication-library-for-js",
   "entries": {
     "msal-node client-credential Regression Test": [
@@ -1366,6 +1366,44 @@ window.BENCHMARK_DATA = {
             "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsLastItemInTheCache",
             "value": 248520,
             "range": "±0.81%",
+            "unit": "ops/sec",
+            "extra": "236 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ydi.w127@gmail.com",
+            "name": "Yongdi Wang",
+            "username": "yongdiw"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "8316ee5f4bf29bdb326bf51b9b621b29731b36dc",
+          "message": "Add extraQueryParams for api calls (#7974)",
+          "timestamp": "2025-08-27T19:50:29+01:00",
+          "tree_id": "f7501b1a73f3c1c1226d4fb37f378613125226ad",
+          "url": "https://github.com/fondoger/microsoft-authentication-library-for-js/commit/8316ee5f4bf29bdb326bf51b9b621b29731b36dc"
+        },
+        "date": 1756331297543,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsFirstItemInTheCache",
+            "value": 255910,
+            "range": "±0.71%",
+            "unit": "ops/sec",
+            "extra": "223 samples"
+          },
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsLastItemInTheCache",
+            "value": 254699,
+            "range": "±0.59%",
             "unit": "ops/sec",
             "extra": "236 samples"
           }
