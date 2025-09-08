@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1757022514090,
+  "lastUpdate": 1757368102279,
   "repoUrl": "https://github.com/fondoger/microsoft-authentication-library-for-js",
   "entries": {
     "msal-node client-credential Regression Test": [
@@ -1518,6 +1518,44 @@ window.BENCHMARK_DATA = {
             "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsLastItemInTheCache",
             "value": 241833,
             "range": "±0.89%",
+            "unit": "ops/sec",
+            "extra": "232 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "thomas.norling@microsoft.com",
+            "name": "Thomas Norling",
+            "username": "tnorling"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "48114c12a879c48213bb34cb45c87c316cf3bc88",
+          "message": "Export client capabilities helper (#8033)\n\nExports client capabilities helper to be used by the pairwise broker\nwhen crafting embedded request",
+          "timestamp": "2025-09-08T09:46:00-07:00",
+          "tree_id": "58296faacc173b47d4f5d5efefde5a9e42fc5bbe",
+          "url": "https://github.com/fondoger/microsoft-authentication-library-for-js/commit/48114c12a879c48213bb34cb45c87c316cf3bc88"
+        },
+        "date": 1757368100519,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsFirstItemInTheCache",
+            "value": 247884,
+            "range": "±0.69%",
+            "unit": "ops/sec",
+            "extra": "234 samples"
+          },
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsLastItemInTheCache",
+            "value": 243902,
+            "range": "±0.93%",
             "unit": "ops/sec",
             "extra": "232 samples"
           }
