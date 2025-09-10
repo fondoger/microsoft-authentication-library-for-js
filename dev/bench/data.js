@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1757476109405,
+  "lastUpdate": 1757519299275,
   "repoUrl": "https://github.com/fondoger/microsoft-authentication-library-for-js",
   "entries": {
     "msal-node client-credential Regression Test": [
@@ -1633,6 +1633,44 @@ window.BENCHMARK_DATA = {
             "range": "±0.82%",
             "unit": "ops/sec",
             "extra": "236 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "kshabelko@microsoft.com",
+            "name": "Konstantin Shabelko",
+            "username": "konstantin-msft"
+          },
+          "committer": {
+            "email": "kshabelko@microsoft.com",
+            "name": "Konstantin",
+            "username": "konstantin-msft"
+          },
+          "distinct": true,
+          "id": "8117dc6664bf77652457ba1a58b29df6402890f6",
+          "message": "Change files",
+          "timestamp": "2025-09-10T10:48:59-04:00",
+          "tree_id": "22fce366f103b87d5c4359b418939c3d906fbf08",
+          "url": "https://github.com/fondoger/microsoft-authentication-library-for-js/commit/8117dc6664bf77652457ba1a58b29df6402890f6"
+        },
+        "date": 1757519296916,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsFirstItemInTheCache",
+            "value": 252419,
+            "range": "±0.88%",
+            "unit": "ops/sec",
+            "extra": "234 samples"
+          },
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsLastItemInTheCache",
+            "value": 249629,
+            "range": "±0.70%",
+            "unit": "ops/sec",
+            "extra": "218 samples"
           }
         ]
       }
