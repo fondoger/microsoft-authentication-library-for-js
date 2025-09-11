@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1757519299275,
+  "lastUpdate": 1757584124969,
   "repoUrl": "https://github.com/fondoger/microsoft-authentication-library-for-js",
   "entries": {
     "msal-node client-credential Regression Test": [
@@ -1671,6 +1671,44 @@ window.BENCHMARK_DATA = {
             "range": "±0.70%",
             "unit": "ops/sec",
             "extra": "218 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "45603194+shenj@users.noreply.github.com",
+            "name": "Jian Shen",
+            "username": "shenj"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "b66a707fdfa0c46c3f367b46e8c756985bfea3c1",
+          "message": "Support JIT during Sign-In and Add AI instructions files (#8007)\n\nThis PR merges branch custom-auth/jiashen/jit into dev.\nSummary:\n- Support JIT experience during Sign-In in msal-browser/custom_auth\nflows\n- Add .github Copilot instructions and custom_auth instructions files",
+          "timestamp": "2025-09-11T09:37:28+01:00",
+          "tree_id": "602bd3dea7a29a5fe2a2d8ed3049a1654e10bd50",
+          "url": "https://github.com/fondoger/microsoft-authentication-library-for-js/commit/b66a707fdfa0c46c3f367b46e8c756985bfea3c1"
+        },
+        "date": 1757584122585,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsFirstItemInTheCache",
+            "value": 250230,
+            "range": "±0.77%",
+            "unit": "ops/sec",
+            "extra": "235 samples"
+          },
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsLastItemInTheCache",
+            "value": 241272,
+            "range": "±0.76%",
+            "unit": "ops/sec",
+            "extra": "234 samples"
           }
         ]
       }
