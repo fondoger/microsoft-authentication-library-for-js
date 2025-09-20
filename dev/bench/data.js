@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1758232113595,
+  "lastUpdate": 1758383311329,
   "repoUrl": "https://github.com/fondoger/microsoft-authentication-library-for-js",
   "entries": {
     "msal-node client-credential Regression Test": [
@@ -1899,6 +1899,44 @@ window.BENCHMARK_DATA = {
             "range": "±0.60%",
             "unit": "ops/sec",
             "extra": "237 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "45603194+shenj@users.noreply.github.com",
+            "name": "Jian Shen",
+            "username": "shenj"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "4ab3202e1e4f584f092a0f0b345740395d350e88",
+          "message": "Add 2 more Dublin teammates as owners for the native auth feature (#8058)",
+          "timestamp": "2025-09-20T05:53:38-07:00",
+          "tree_id": "111fd5906da519f093215ceba386b1fecd62b6f3",
+          "url": "https://github.com/fondoger/microsoft-authentication-library-for-js/commit/4ab3202e1e4f584f092a0f0b345740395d350e88"
+        },
+        "date": 1758383309769,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsFirstItemInTheCache",
+            "value": 250158,
+            "range": "±0.73%",
+            "unit": "ops/sec",
+            "extra": "234 samples"
+          },
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsLastItemInTheCache",
+            "value": 248522,
+            "range": "±0.83%",
+            "unit": "ops/sec",
+            "extra": "233 samples"
           }
         ]
       }
