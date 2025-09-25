@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1758728917075,
+  "lastUpdate": 1758836904686,
   "repoUrl": "https://github.com/fondoger/microsoft-authentication-library-for-js",
   "entries": {
     "msal-node client-credential Regression Test": [
@@ -2013,6 +2013,44 @@ window.BENCHMARK_DATA = {
             "range": "±0.83%",
             "unit": "ops/sec",
             "extra": "235 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sameera.gajjarapu@microsoft.com",
+            "name": "Sameera Gajjarapu",
+            "username": "sameerag"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "5ecdba1412ead945863f5f8df308b70deb14d37f",
+          "message": "Add support for \"pageException\" error to fallback to web (#8064)\n\n`PageException` is currently not being handled as a fatal error by MSAL\nJS, but the server falls back to web if it encounters the same. This PR\naddresses the gap.",
+          "timestamp": "2025-09-25T11:31:06-07:00",
+          "tree_id": "83ccf183c8c6472c733346a4b4867c4f9b208f63",
+          "url": "https://github.com/fondoger/microsoft-authentication-library-for-js/commit/5ecdba1412ead945863f5f8df308b70deb14d37f"
+        },
+        "date": 1758836903116,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsFirstItemInTheCache",
+            "value": 251577,
+            "range": "±0.82%",
+            "unit": "ops/sec",
+            "extra": "234 samples"
+          },
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsLastItemInTheCache",
+            "value": 242951,
+            "range": "±0.74%",
+            "unit": "ops/sec",
+            "extra": "223 samples"
           }
         ]
       }
