@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1759312102314,
+  "lastUpdate": 1759787300363,
   "repoUrl": "https://github.com/fondoger/microsoft-authentication-library-for-js",
   "entries": {
     "msal-node client-credential Regression Test": [
@@ -2127,6 +2127,44 @@ window.BENCHMARK_DATA = {
             "range": "±0.95%",
             "unit": "ops/sec",
             "extra": "232 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "45603194+shenj@users.noreply.github.com",
+            "name": "Jian Shen",
+            "username": "shenj"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "b08a46c1a4a2fbc2eac4521e5e672a084998940d",
+          "message": "[Native Auth] Enable MFA and JIT for SMS in public interfaces (#8069)",
+          "timestamp": "2025-10-06T21:25:43+01:00",
+          "tree_id": "e63b3fd9d8ec86afceaed3d70275d2d58af67c4f",
+          "url": "https://github.com/fondoger/microsoft-authentication-library-for-js/commit/b08a46c1a4a2fbc2eac4521e5e672a084998940d"
+        },
+        "date": 1759787298788,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsFirstItemInTheCache",
+            "value": 237610,
+            "range": "±0.83%",
+            "unit": "ops/sec",
+            "extra": "222 samples"
+          },
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsLastItemInTheCache",
+            "value": 230296,
+            "range": "±1.06%",
+            "unit": "ops/sec",
+            "extra": "236 samples"
           }
         ]
       }
