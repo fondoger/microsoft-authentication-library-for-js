@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1761277705347,
+  "lastUpdate": 1761320916637,
   "repoUrl": "https://github.com/fondoger/microsoft-authentication-library-for-js",
   "entries": {
     "msal-node client-credential Regression Test": [
@@ -2317,6 +2317,44 @@ window.BENCHMARK_DATA = {
             "range": "±0.93%",
             "unit": "ops/sec",
             "extra": "223 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "87724641+Robbie-Microsoft@users.noreply.github.com",
+            "name": "Robbie-Microsoft",
+            "username": "Robbie-Microsoft"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "242f70e69e8f8ba41e8879c1622bdec16a464470",
+          "message": "Fixed Minor Type Error in BaseManagedIdentitySource.ts (#8107)\n\nThis was previously showing an error in VSCode. The error is now\nresolved via stricter typing.",
+          "timestamp": "2025-10-24T09:54:59-04:00",
+          "tree_id": "88ae985ea8eecc82c9506833637613d1b5d1742a",
+          "url": "https://github.com/fondoger/microsoft-authentication-library-for-js/commit/242f70e69e8f8ba41e8879c1622bdec16a464470"
+        },
+        "date": 1761320914824,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsFirstItemInTheCache",
+            "value": 254919,
+            "range": "±0.74%",
+            "unit": "ops/sec",
+            "extra": "223 samples"
+          },
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsLastItemInTheCache",
+            "value": 243853,
+            "range": "±0.73%",
+            "unit": "ops/sec",
+            "extra": "232 samples"
           }
         ]
       }
