@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1761320916637,
+  "lastUpdate": 1761342509047,
   "repoUrl": "https://github.com/fondoger/microsoft-authentication-library-for-js",
   "entries": {
     "msal-node client-credential Regression Test": [
@@ -2355,6 +2355,44 @@ window.BENCHMARK_DATA = {
             "range": "±0.73%",
             "unit": "ops/sec",
             "extra": "232 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "87724641+Robbie-Microsoft@users.noreply.github.com",
+            "name": "Robbie-Microsoft",
+            "username": "Robbie-Microsoft"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "ed5cadc407558f4f62c49c5f982382beba759ebc",
+          "message": "Improved Managed Identity JSDocs (#8106)\n\nThis was done for all managed identity sources.",
+          "timestamp": "2025-10-24T12:46:49-04:00",
+          "tree_id": "4be781b674666d1915c41d94c4eb470eacd5cf07",
+          "url": "https://github.com/fondoger/microsoft-authentication-library-for-js/commit/ed5cadc407558f4f62c49c5f982382beba759ebc"
+        },
+        "date": 1761342507287,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsFirstItemInTheCache",
+            "value": 254088,
+            "range": "±0.79%",
+            "unit": "ops/sec",
+            "extra": "234 samples"
+          },
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsLastItemInTheCache",
+            "value": 253353,
+            "range": "±0.59%",
+            "unit": "ops/sec",
+            "extra": "224 samples"
           }
         ]
       }
