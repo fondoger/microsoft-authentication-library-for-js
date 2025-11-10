@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1762400866910,
+  "lastUpdate": 1762789714066,
   "repoUrl": "https://github.com/fondoger/microsoft-authentication-library-for-js",
   "entries": {
     "msal-node client-credential Regression Test": [
@@ -2507,6 +2507,44 @@ window.BENCHMARK_DATA = {
             "range": "±1.17%",
             "unit": "ops/sec",
             "extra": "223 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "87724641+Robbie-Microsoft@users.noreply.github.com",
+            "name": "Robbie-Microsoft",
+            "username": "Robbie-Microsoft"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "2f011c9d89a0b816d3c7c6d4e359945c0ebf6584",
+          "message": "msal-node: Added Logging to HttpClient (#8101)",
+          "timestamp": "2025-11-10T10:12:44-05:00",
+          "tree_id": "0a4e05143e2edd3769a96368fe730b54237ca95f",
+          "url": "https://github.com/fondoger/microsoft-authentication-library-for-js/commit/2f011c9d89a0b816d3c7c6d4e359945c0ebf6584"
+        },
+        "date": 1762789711764,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsFirstItemInTheCache",
+            "value": 245510,
+            "range": "±0.73%",
+            "unit": "ops/sec",
+            "extra": "235 samples"
+          },
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsLastItemInTheCache",
+            "value": 238596,
+            "range": "±0.98%",
+            "unit": "ops/sec",
+            "extra": "232 samples"
           }
         ]
       }
