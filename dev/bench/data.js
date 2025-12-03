@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1764712104773,
+  "lastUpdate": 1764798509961,
   "repoUrl": "https://github.com/fondoger/microsoft-authentication-library-for-js",
   "entries": {
     "msal-node client-credential Regression Test": [
@@ -2773,6 +2773,44 @@ window.BENCHMARK_DATA = {
             "range": "±0.80%",
             "unit": "ops/sec",
             "extra": "224 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sameera.gajjarapu@microsoft.com",
+            "name": "Sameera Gajjarapu",
+            "username": "sameerag"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "bbc64c96b617f5c7d16f9e202c23ae42e2cb748f",
+          "message": "Enable Edge API for Platform brokering (#8171)\n\nThis pull request:\n\n* Introduces support for configuring DOM API usage for platform broker\nauthentication in MSAL.js, specifically targeting Edge browser\nenvironments.\n* Updates documentation to clarify platform broker support across\nWindows and Mac, adds a new configuration flag\n(`allowPlatformBrokerWithDOM`), and introduces validation to prevent\nmisconfiguration.\n* Error handling and messaging are also improved for invalid\nconfiguration scenarios.\n\n---------\n\nCo-authored-by: Copilot <175728472+Copilot@users.noreply.github.com>\nCo-authored-by: Copilot <198982749+Copilot@users.noreply.github.com>",
+          "timestamp": "2025-12-03T14:43:17-05:00",
+          "tree_id": "9143c1fdc9bf998be05d6a51be71bec14d865f44",
+          "url": "https://github.com/fondoger/microsoft-authentication-library-for-js/commit/bbc64c96b617f5c7d16f9e202c23ae42e2cb748f"
+        },
+        "date": 1764798508439,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsFirstItemInTheCache",
+            "value": 251448,
+            "range": "±0.94%",
+            "unit": "ops/sec",
+            "extra": "235 samples"
+          },
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsLastItemInTheCache",
+            "value": 253389,
+            "range": "±0.65%",
+            "unit": "ops/sec",
+            "extra": "236 samples"
           }
         ]
       }
