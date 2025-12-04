@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1764798509961,
+  "lastUpdate": 1764841708351,
   "repoUrl": "https://github.com/fondoger/microsoft-authentication-library-for-js",
   "entries": {
     "msal-node client-credential Regression Test": [
@@ -2811,6 +2811,44 @@ window.BENCHMARK_DATA = {
             "range": "±0.65%",
             "unit": "ops/sec",
             "extra": "236 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "kshabelko@microsoft.com",
+            "name": "Konstantin",
+            "username": "konstantin-msft"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "0a9c566ff0e1c17960f3e7983fd6a010c81d2397",
+          "message": "Address react and next CVEs (#8179)\n\n- Address react and next CVEs",
+          "timestamp": "2025-12-03T23:26:08-05:00",
+          "tree_id": "4fae464896cf727d7cddcc64977220e7f307c658",
+          "url": "https://github.com/fondoger/microsoft-authentication-library-for-js/commit/0a9c566ff0e1c17960f3e7983fd6a010c81d2397"
+        },
+        "date": 1764841706792,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsFirstItemInTheCache",
+            "value": 252822,
+            "range": "±0.64%",
+            "unit": "ops/sec",
+            "extra": "234 samples"
+          },
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsLastItemInTheCache",
+            "value": 252125,
+            "range": "±0.73%",
+            "unit": "ops/sec",
+            "extra": "235 samples"
           }
         ]
       }
