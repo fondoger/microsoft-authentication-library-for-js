@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1764884908201,
+  "lastUpdate": 1767714506698,
   "repoUrl": "https://github.com/fondoger/microsoft-authentication-library-for-js",
   "entries": {
     "msal-node client-credential Regression Test": [
@@ -2887,6 +2887,44 @@ window.BENCHMARK_DATA = {
             "range": "±0.69%",
             "unit": "ops/sec",
             "extra": "230 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ydi.w127@gmail.com",
+            "name": "Yongdi Wang",
+            "username": "yongdiw"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c5abda8bad8623dab1ce9b2db7e1ef0ea9e02089",
+          "message": "Update 3p-e2e pipelines and native auth e2e tests (#8200)",
+          "timestamp": "2026-01-06T13:17:28Z",
+          "tree_id": "3e77d78bd13945d1ced81bdcf9a788e76b5958ba",
+          "url": "https://github.com/fondoger/microsoft-authentication-library-for-js/commit/c5abda8bad8623dab1ce9b2db7e1ef0ea9e02089"
+        },
+        "date": 1767714505138,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsFirstItemInTheCache",
+            "value": 244480,
+            "range": "±0.97%",
+            "unit": "ops/sec",
+            "extra": "230 samples"
+          },
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsLastItemInTheCache",
+            "value": 237954,
+            "range": "±0.88%",
+            "unit": "ops/sec",
+            "extra": "229 samples"
           }
         ]
       }
