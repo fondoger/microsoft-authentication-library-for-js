@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1771537729680,
+  "lastUpdate": 1771624129220,
   "repoUrl": "https://github.com/fondoger/microsoft-authentication-library-for-js",
   "entries": {
     "msal-node client-credential Regression Test": [
@@ -3381,6 +3381,44 @@ window.BENCHMARK_DATA = {
             "range": "±0.77%",
             "unit": "ops/sec",
             "extra": "224 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sameera.gajjarapu@microsoft.com",
+            "name": "Sameera Gajjarapu",
+            "username": "sameerag"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "de0cf51b35dda10cbfa63be44113ad85fac9dc94",
+          "message": "Verify SSO Capability (#8252)\n\nThis PR verfies if an app is capable of SSO after a successful\ninteractive authentication. When enabled via the new `verifySso`\nconfiguration option, MSAL will fire a fire-and-forget `verifySso()`\ncall after handleRedirectPromise and acquireTokenPopup complete\nsuccessfully.\n\nChanges:\n\n- Added new `verifySso` configuration option (defaults to false)\n- Implemented fire-and-forget background verifySso after interactive\nauthentication\n- Added comprehensive telemetry tracking with new `SsoCapable`\nperformance event\n\n---------\n\nCo-authored-by: Copilot <175728472+Copilot@users.noreply.github.com>\nCo-authored-by: Copilot <198982749+Copilot@users.noreply.github.com>\nCo-authored-by: Konstantin <kshabelko@microsoft.com>",
+          "timestamp": "2026-02-20T12:33:28-08:00",
+          "tree_id": "585bf4c3445ea074a27119f6d6f98e876402a431",
+          "url": "https://github.com/fondoger/microsoft-authentication-library-for-js/commit/de0cf51b35dda10cbfa63be44113ad85fac9dc94"
+        },
+        "date": 1771624127083,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsFirstItemInTheCache",
+            "value": 251180,
+            "range": "±0.76%",
+            "unit": "ops/sec",
+            "extra": "235 samples"
+          },
+          {
+            "name": "ConfidentialClientApplication#acquireTokenByClientCredential-fromCache-resourceIsLastItemInTheCache",
+            "value": 252943,
+            "range": "±0.75%",
+            "unit": "ops/sec",
+            "extra": "238 samples"
           }
         ]
       }
